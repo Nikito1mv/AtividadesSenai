@@ -8,6 +8,17 @@ package q02;
  *
  * @author Micael
  */
-public class Beta {
+public class Beta extends Caminhao{
+
+    @Override
+    public void inserePluviometro(Pluviometro p) {
+        for (Pluviometro a: pluviometros) {
+            if(!a.getTipo().equals(p.getTipo())) {
+                pluviometros.add(p);
+                break;
+            }
+        }
+        System.out.println("Não foi possivel adicionar o pulviometro");
+    }
     
 }
